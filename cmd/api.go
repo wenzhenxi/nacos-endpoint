@@ -25,7 +25,7 @@ func api(c *cli.Context) error {
 	gin.SetMode(gin.ReleaseMode)
 
 	r := gin.New()
-	r.Use(gin.Logger())
+	//r.Use(gin.Logger())
 	r.Use(gin.Recovery())
 	//r.Use(gzip.Gzip(gzip.DefaultCompression))
 
@@ -39,7 +39,7 @@ func api(c *cli.Context) error {
 		}
 	})
 
-	err := endless.ListenAndServe(":8088", r)
+	err := endless.ListenAndServe(":8080", r)
 	if err != nil {
 		return err
 	}
