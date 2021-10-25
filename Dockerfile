@@ -1,5 +1,5 @@
 #template
-FROM sunmi-docker-images-registry.cn-hangzhou.cr.aliyuncs.com/public/golang:1.16 As builder
+FROM sunmi-docker-images-registry.cn-hangzhou.cr.aliyuncs.com/public/golang As builder
 
 ENV GOPROXY https://goproxy.cn,direct
 ENV GO111MODULE on
